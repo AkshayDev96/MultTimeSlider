@@ -10,6 +10,6 @@ const App = () => {
       <TimeRangeSlider onChange={(e)=>console.log("D",e)}/>
     </div>
   )
-};
+}; 
 
 export default App;
