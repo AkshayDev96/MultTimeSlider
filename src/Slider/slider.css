@@ -1,0 +1,48 @@
+.slidecontainer {
+    transform: translateY(-10px);
+    text-align: center;
+  }
+  .slider {
+    --SliderColor: hsl(50, 100%, 50%);
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 50px auto;
+    height: 8px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    background-color: rgb(200, 200, 200);
+  }
+  
+  /* --------------------------- webkit browsers */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: var(--SliderColor);
+    overflow: visible;
+    cursor: pointer;
+  }
+  /* -------------------------- Firefox */
+  .slider::-moz-range-thumb { 
+    -moz-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 10px;
+    background-color: var(--SliderColor);
+    overflow: visible;
+    cursor: pointer;
+  }
+  .slider::-moz-focus-outer { border: 0; }
+
+  .bg-track{
+    background: #eeeeee;
+    height: 12px;
+  }
+  .range-btw{
+    background: #0640aa;
+    height: 12px;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+  }

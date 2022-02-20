@@ -3,6 +3,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./tooltip.css";
+import moment from 'moment'
 
 // *******************************************************
 // HANDLE COMPONENT
@@ -56,7 +57,7 @@ export class Handle extends Component {
           
             <div className="tooltip">
             <span style={buttonStyle}><button onClick={addSlide}>+</button>{" "}<button onClick={removeSlide}>-</button></span>
-              <span className="tooltiptext">{value}:00</span>
+              <span className="tooltiptext"> {moment(`${value}:00`,'hh:mm a').format('hh:mm a')}</span>
             </div>
           </div>
         <div
@@ -168,7 +169,7 @@ export function Tick({ tick, count, format }) {
           left: `${tick.percent}%`
         }}
       >
-        {format(tick.value)}
+        {moment(`${format(tick.value)}:00`,'hh:mm a').format('hh:mm a')}
       </div>
     </div>
   );
